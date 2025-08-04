@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tetris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tetris</h1>
+    <div class="score-board">
+      <p>Score: <span id="score">0</span></p>
+    </div>
+    <canvas id="tetris" width="200" height="400"></canvas>
+
+    <div class="controls">
+      <!-- TODO Controls -->
+      <h2>Controls</h2>
+      <div class="instructions">
+        <h3>Pause / Start</h3>
+        <p>ESC Key</p>
+      </div>
+      <div class="instructions">
+        <h3>Left / Right</h3>
+        <p>&larr; or &rarr; Keys</p>
+      </div>
+      <div class="instructions">
+        <h3>Quick Drop</h3>
+        <p>&darr; Key</p>
+      </div>
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="restartBtn">Restart</button>
+    </div>
+
+
+  </div>
+
+  <div id="gameOverOverlay" class="overlay">
+    <div class="game-over-content">
+      <h2>Game Over</h2>
+      <button id="restartBtnOverlay">Restart</button>
+    </div>
+  </div>
+  <audio id="bgMusic" src="background-music.mp3" loop></audio>
+  <script src="tetris.js"></script>
+</body>
+</html>

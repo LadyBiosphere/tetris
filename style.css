@@ -1,0 +1,167 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body background and font */
+body {
+  background-color: #4169e1;
+  background-image: url(blue-background.jpg);
+  background-position: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+/* Container to center everything */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  user-select: none;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #81d4fa;
+}
+
+/* Canvas styling */
+#tetris {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.12));
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(135,206,235,0.7);
+  display: block;
+  margin: 0 auto 20px;
+  image-rendering: pixelated;
+}
+
+/* Controls container */
+.controls {
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  color: #e0f7fa;
+  font-weight: 600;
+  padding: 10px 18px;
+  margin: 20px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(135,206,235,0.5);
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(135,206,235,0.9);
+}
+
+/* Scoreboard */
+.score-board {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 4px #81d4fa;
+  margin-bottom: 30px;
+}
+
+/* Game Over overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 8, 10, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 100;
+}
+
+.overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.game-over-content {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px rgba(135,206,235,0.8);
+  text-align: center;
+  color: #e0f7fa;
+}
+
+.game-over-content h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #81d4fa;
+}
+
+.game-over-content button {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: 2px solid #81d4fa;
+  background: transparent;
+  color: #81d4fa;
+  box-shadow: 0 0 10px #81d4fa;
+}
+
+.game-over-content button:hover {
+  background: #81d4fa;
+  color: #002f4b;
+  box-shadow: 0 0 15px #42a5f5;
+}
+
+/* TODO Controls */
+.instructions{
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 0.95em;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #81d4fa;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+h3, p{
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #81d4fa;
+}
+
+p{
+  margin-top: 3px;
+}
